@@ -17,7 +17,7 @@ class HeartRateVM: ObservableObject {
     @Published var lastUpdateTime: String?
     
     private let healthKitService = HealthKitServices()
-    private let heartRateStream = HeartRateStream()
+    private let heartRateStream = HeartRateStream(store: <#HKHealthStore#>)
     private var cancellables = Set<AnyCancellable>()
     
     init() {
